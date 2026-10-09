@@ -95,5 +95,6 @@ public class ParseTest {
         assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("( 2 + 3"));
 
         assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("2 + 3 )"));
+
     }
 }

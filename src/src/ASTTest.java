@@ -50,5 +50,10 @@ public class ASTTest {
         assertEquals(14.0, node.eval());
         }
 
+    @Test
+    public void binopEvalInvalidOperator() {
+        AST node = new BinopNode("%", new NumNode(1), new NumNode(2));
+        assertThrows(IllegalArgumentException.class, node::eval);
+    }
 }
 
